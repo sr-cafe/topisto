@@ -1,0 +1,53 @@
+{
+  "name": "topisto",
+  "version": "0.0.1",
+  "description": "A TODO parser",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo '=> Linting' && eslint ./src/**",
+    "precompile": "npm run lint -s",
+    "compile": "babel src/ -d lib/ -w -s",
+    "start": "node bin/topisto > test.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "rules": {
+      "no-console": 1
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sr-cafe/topisto.git"
+  },
+  "author": "sr-cafe",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sr-cafe/topisto/issues"
+  },
+  "homepage": "https://github.com/sr-cafe/topisto#readme",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-eslint": "^5.0.0",
+    "babel-preset-es2015": "^6.5.0",
+    "eslint": "^2.2.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.1",
+    "commander": "^2.9.0",
+    "ramda": "^0.19.1"
+  }
+}
