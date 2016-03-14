@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var Topisto = require('../lib/index').default;
+var res = new Topisto().run()
+	.then(function(result){
+		process.stdout.write(JSON.stringify(result, null, 4));
+	});
