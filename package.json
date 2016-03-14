@@ -2,7 +2,10 @@
   "name": "topisto",
   "version": "0.0.1",
   "description": "A TODO parser",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "bin": {
+    "topisto": "lib/index.js",  
+  },
   "scripts": {
     "lint": "echo '=> Linting' && eslint ./src/**",
     "precompile": "npm run lint -s",
