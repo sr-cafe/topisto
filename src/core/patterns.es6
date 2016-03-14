@@ -63,7 +63,7 @@ export let COMMENT_PATTERNS = [
 				pattern: {
 					start: /^\/\//
 				}
-			},			
+			},
 			{
 				type: LINE_TYPE_MULTI,
 				pattern: {
@@ -115,16 +115,13 @@ export const ANNOTATION_PATERNS = [
 	{
 		type: ANNOTATION_TYPE_TODO,
 		pattern: /^TODO\W*/
-		// label: "✓ TODO".underline.magenta
 	},
 	{
 		type: ANNOTATION_TYPE_NOTE,
 		pattern: /^NOTE\W*/
-		// label: "✐ NOTE".underline.blue
 	},
 	{
 		type: ANNOTATION_TYPE_FIXME,
 		pattern: /^FIXME\W*/
-		// label: "☂ FIXME".underline.red
 	}
 ];

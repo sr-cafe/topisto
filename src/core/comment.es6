@@ -103,6 +103,7 @@ export default class Comment{
 					}
 
 					return Comment.cleanCommentLine(line, cleaners);
+
 				}).filter(function(line){
 					return line.trim().length > 0;
 				});
@@ -114,7 +115,7 @@ export default class Comment{
 
 	static cleanCommentLine(line, cleaners){
 		return cleaners.reduce(function(previous, current){
-			return previous.replace(current, '')
+			return previous.replace(current, '').trim();
 		}, line.trim());
 	}
 

@@ -27,14 +27,14 @@ let getExtensions = function(){
 }
 
 export default class Topisto{
-	static get EXTENSIONS() { return ['css', 'js', 'es6'] }
+	static get EXTENSIONS() { return ['es6'] }
 
 	constructor(){
 		// TODO Read command line arguments
 		// TODO Allow excluded folders
 		// NOTE Is "process.cwd()" necessary?
 		this.folders = [
-			path.join(process.cwd(), 'src2')
+			path.join(process.cwd(), 'src')
 		];
 
 		this.extensions = getExtensions();

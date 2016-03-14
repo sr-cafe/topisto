@@ -1,6 +1,5 @@
 import R from 'ramda';
 import * as PATTERNS from './patterns';
-import AnnotationContent from './annotationContent';
 
 export default class Annotation{
 	static createAnnotation(comment){
@@ -25,7 +24,7 @@ export default class Annotation{
 			else{
 				content[0] = content[0].replace(annotationRule.pattern, '');
 			}
-			
+
 			annotation = new Annotation(annotationRule.type, content, comment);
 		}
 
